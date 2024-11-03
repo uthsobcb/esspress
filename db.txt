@@ -1,0 +1,5 @@
+/GET Database with .txt file
+
+And You're testing a http server using C programming. This is a GET request
+
+
