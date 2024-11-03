@@ -39,7 +39,7 @@ if (strncmp(request_buffer, "GET / ", 6) == 0) {
             send(client_socket, http_header, strlen(http_header), 0);
         } 
         else if (strncmp(request_buffer, "GET /data", 9) == 0) {
-            FILE* db_file = fopen("db.txt", "r");
+            FILE* db_file = fopen("assets/db.txt", "r");
             if (db_file == NULL) {
                 char *not_found_response = "HTTP/1.1 404 Not Found\r\nContent-Type: text/plain\r\n\r\n 404 Database not found.";
                 send(client_socket, not_found_response, strlen(not_found_response), 0);
